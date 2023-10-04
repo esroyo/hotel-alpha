@@ -8,14 +8,18 @@
   <body>
     <h1 id="header">Welcome to Grand Hotel Alpha</h1>
 
-     <nav><a href="/">Home</a> | <a href="/contact.html">Contact</a></nav> 
+     <nav><a href="./">Home</a> | <a href="./contact.html">Contact</a></nav> 
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Metus aliquam eleifend mi in nulla.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo odio aenean sed adipiscing diam. Pretium aenean pharetra magna ac. Maecenas accumsan lacus vel facilisis volutpat est velit. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Est ultricies integer quis auctor elit sed vulputate. Arcu bibendum at varius vel pharetra. Volutpat est velit egestas dui id ornare.</p>
 
     <hr />
-
-    Sandboxed iframe:
+    <br/>
     <iframe sandbox="allow-popups-to-escape-sandbox allow-popups allow-forms allow-storage-access-by-user-activation allow-scripts allow-same-origin" src="https://storage-access-api-demo.deno.dev"></iframe>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
     <hr />
 
@@ -28,8 +32,8 @@
       };
       const currentDomain = location.hostname;
       const sisterDomain = Object.keys(hotels).find((domain) => domain !== currentDomain);
-      const currentCity = currentDomain.split('.')[1];
-      const sisterCity = sisterDomain.split('.')[1];
+      const currentCity = currentDomain.split('.')[1].toUpperCase();
+      const sisterCity = sisterDomain.split('.')[1].toUpperCase();
       const currentHotelTitle = `Grand Hotel Alpha 🌍 at ${currentCity} city`;
       const sisterHotelTitle = `Grand Hotel Alpha 🌍 at ${sisterCity} city`;
       header.textContent = document.title = `Welcome to ${currentHotelTitle}`;
